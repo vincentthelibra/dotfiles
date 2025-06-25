@@ -1,0 +1,180 @@
+{
+    //? Theme and Icons
+    "workbench.colorTheme": "One Dark Pro Night Flat",
+    "workbench.iconTheme": "material-icon-theme",
+    //? Coding
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    //? *********** VIM Keymaps *********/
+    "vim.leader": ",",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        //? Clears highlight of current search
+        {
+            "before": [
+                "<Esc>"
+            ],
+            "when": [
+                "editorFocus"
+            ],
+            "commands": [
+                ":nohl"
+            ],
+            "silent": true
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "t",
+                "n"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+
+    //? *********** VIM Options *********/
+    "vim.incsearch": true,
+    "vim.searchHighlightColor": "#f6ff0080",
+    "vim.searchHighlightTextColor": "#fff",
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.highlightedyank.enable": true,
+    "vim.smartRelativeLine": true,
+    "vim.surround": true,
+    "vim.easymotion": true, // Search with "\\f"
+
+    //? To improve performance
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+
+    //? *********** Better Comments *********/
+    "better-comments.multilineComments": true,
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
+
+    //? *********** SQL Server Settings *********/
+    "mssql.connectionGroups": [
+        {
+            "name": "ROOT",
+            "id": "CFF86676-1C66-4D31-9B98-003938288BBE"
+        }
+    ],
+    "mssql.connections": [
+        {
+            "authenticationType": "AzureMFA",
+            "connectTimeout": 30,
+            "applicationName": "vscode-mssql",
+            "applicationIntent": "ReadWrite",
+            "profileName": "Prod Server P01",
+            "server": "uks-az-sql-p01.ukso10f89307c7925.database.windows.net",
+            "accountId": "9eec930d-96b4-4dcb-a134-a328f5770c08.8a6cf78f-ef5b-41d5-b3d3-f2f952598362",
+            "encrypt": "Mandatory",
+            "user": "Vincent Li - vincent.li@ivcevidensia.com",
+            "email": "vincent.li@ivcevidensia.com",
+            "azureAccountToken": "",
+            "expiresOn": 1750866951,
+            "groupId": "CFF86676-1C66-4D31-9B98-003938288BBE",
+            "id": "7549D91E-E19B-4549-BAB3-ED88A761D84F",
+            "database": "",
+            "password": "",
+            "commandTimeout": 30
+        },
+        {
+            "authenticationType": "AzureMFA",
+            "connectTimeout": 30,
+            "applicationName": "vscode-mssql",
+            "applicationIntent": "ReadWrite",
+            "profileName": "Prod Server P06",
+            "server": "uks-az-sql-p06.7fcd745e766a.database.windows.net",
+            "accountId": "9eec930d-96b4-4dcb-a134-a328f5770c08.8a6cf78f-ef5b-41d5-b3d3-f2f952598362",
+            "encrypt": "Mandatory",
+            "user": "Vincent Li - vincent.li@ivcevidensia.com",
+            "email": "vincent.li@ivcevidensia.com",
+            "azureAccountToken": "",
+            "expiresOn": 1750866984,
+            "groupId": "CFF86676-1C66-4D31-9B98-003938288BBE",
+            "id": "E7154E23-76BC-4A29-AFF1-559F5839EB51",
+            "database": "",
+            "password": "",
+            "commandTimeout": 30
+        },
+        {
+            "authenticationType": "AzureMFA",
+            "connectTimeout": 30,
+            "applicationName": "vscode-mssql",
+            "applicationIntent": "ReadWrite",
+            "profileName": "Test Server T01",
+            "server": "uks-az-sql-t01.c6dba8b655c2.database.windows.net",
+            "accountId": "9eec930d-96b4-4dcb-a134-a328f5770c08.8a6cf78f-ef5b-41d5-b3d3-f2f952598362",
+            "encrypt": "Mandatory",
+            "user": "Vincent Li - vincent.li@ivcevidensia.com",
+            "email": "vincent.li@ivcevidensia.com",
+            "azureAccountToken": "",
+            "expiresOn": 1750867019,
+            "groupId": "CFF86676-1C66-4D31-9B98-003938288BBE",
+            "id": "E3F8F222-1163-4EA8-AE9E-D8C7E445DD2F",
+            "database": "",
+            "password": "",
+            "commandTimeout": 30
+        }
+    ]
+}
