@@ -175,11 +175,6 @@
     "when": "vim.mode == 'VisualLine' && editorTextFocus"
   },
   {
-    "key": "[ d",
-    "command": "editor.action.marker.prev",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
     "key": "] d",
     "command": "editor.action.marker.next",
     "when": "vim.mode == 'Normal' && editorTextFocus"
