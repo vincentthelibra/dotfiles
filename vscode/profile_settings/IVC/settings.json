@@ -1,0 +1,418 @@
+{
+    //? Coding
+    "[sql]": {
+        "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode",
+    },
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true
+    },
+    //? *********** Formatter Config *********/
+    //* SQL-Formatter
+    "Prettier-SQL.SQLFlavourOverride": "transactsql",
+    "Prettier-SQL.keywordCase": "upper",
+    "Prettier-SQL.linesBetweenQueries": 1,
+    //? *********** Better Comments *********/
+    "better-comments.multilineComments": true,
+    "better-comments.tags": [
+        {
+            "backgroundColor": "transparent",
+            "bold": false,
+            "color": "#FF2D00",
+            "italic": false,
+            "strikethrough": false,
+            "tag": "!",
+            "underline": false
+        },
+        {
+            "backgroundColor": "transparent",
+            "bold": false,
+            "color": "#3498DB",
+            "italic": false,
+            "strikethrough": false,
+            "tag": "?",
+            "underline": false
+        },
+        {
+            "backgroundColor": "transparent",
+            "bold": false,
+            "color": "#474747",
+            "italic": false,
+            "strikethrough": true,
+            "tag": "//",
+            "underline": false
+        },
+        {
+            "backgroundColor": "transparent",
+            "bold": false,
+            "color": "#FF8C00",
+            "italic": false,
+            "strikethrough": false,
+            "tag": "todo",
+            "underline": false
+        },
+        {
+            "backgroundColor": "transparent",
+            "bold": false,
+            "color": "#98C379",
+            "italic": false,
+            "strikethrough": false,
+            "tag": "*",
+            "underline": false
+        }
+    ],
+    //? To improve performance
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    //? *********** SQL Server Settings *********/
+    "mssql.connectionGroups": [
+        {
+            "id": "CFF86676-1C66-4D31-9B98-003938288BBE",
+            "name": "ROOT"
+        }
+    ],
+    "mssql.connections": [
+        {
+            "accountId": "9eec930d-96b4-4dcb-a134-a328f5770c08.8a6cf78f-ef5b-41d5-b3d3-f2f952598362",
+            "applicationIntent": "ReadWrite",
+            "applicationName": "vscode-mssql",
+            "authenticationType": "AzureMFA",
+            "azureAccountToken": "",
+            "commandTimeout": 30,
+            "connectTimeout": 30,
+            "database": "",
+            "email": "vincent.li@ivcevidensia.com",
+            "encrypt": "Mandatory",
+            "expiresOn": 1753087137,
+            "groupId": "CFF86676-1C66-4D31-9B98-003938288BBE",
+            "id": "E7154E23-76BC-4A29-AFF1-559F5839EB51",
+            "password": "",
+            "profileName": "Prod Server P06",
+            "server": "uks-az-sql-p06.7fcd745e766a.database.windows.net",
+            "user": "Vincent Li - vincent.li@ivcevidensia.com",
+            "profileSource": 0
+        },
+        {
+            "accountId": "9eec930d-96b4-4dcb-a134-a328f5770c08.8a6cf78f-ef5b-41d5-b3d3-f2f952598362",
+            "applicationIntent": "ReadWrite",
+            "applicationName": "vscode-mssql",
+            "authenticationType": "AzureMFA",
+            "azureAccountToken": "",
+            "commandTimeout": 30,
+            "connectTimeout": 30,
+            "database": "",
+            "email": "vincent.li@ivcevidensia.com",
+            "encrypt": "Mandatory",
+            "expiresOn": 1750867019,
+            "groupId": "CFF86676-1C66-4D31-9B98-003938288BBE",
+            "id": "E3F8F222-1163-4EA8-AE9E-D8C7E445DD2F",
+            "password": "",
+            "profileName": "Test Server T01",
+            "server": "uks-az-sql-t01.c6dba8b655c2.database.windows.net",
+            "user": "Vincent Li - vincent.li@ivcevidensia.com"
+        },
+        {
+            "accountId": "9eec930d-96b4-4dcb-a134-a328f5770c08.8a6cf78f-ef5b-41d5-b3d3-f2f952598362",
+            "applicationIntent": "ReadWrite",
+            "applicationName": "vscode-mssql",
+            "authenticationType": "AzureMFA",
+            "azureAccountToken": "",
+            "commandTimeout": 30,
+            "connectTimeout": 30,
+            "database": "",
+            "email": "vincent.li@ivcevidensia.com",
+            "encrypt": "Mandatory",
+            "expiresOn": 1752667900,
+            "groupId": "CFF86676-1C66-4D31-9B98-003938288BBE",
+            "id": "7549D91E-E19B-4549-BAB3-ED88A761D84F",
+            "password": "",
+            "profileName": "Prod Server P01",
+            "server": "uks-az-sql-p01.ukso10f89307c7925.database.windows.net",
+            "user": "Vincent Li - vincent.li@ivcevidensia.com",
+            "profileSource": 0
+        }
+    ],
+    "vim.easymotion": true, // Search with "\\f"
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.highlightedyank.enable": true,
+    "vim.hlsearch": true,
+    //? *********** VIM Options *********/
+    "vim.incsearch": true,
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "after": [
+                "<Esc>"
+            ],
+            "before": [
+                "t",
+                "n"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ],
+            "when": "editorLangId = sql && editorTextFocus"
+        }
+    ],
+    //? *********** VIM Keymaps *********/
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        //? Clears highlight of current search
+        {
+            "before": [
+                "<Esc>"
+            ],
+            "commands": [
+                ":nohl"
+            ],
+            "silent": true,
+            "when": [
+                "editorFocus"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "l",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                ":w!"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "v"
+            ],
+            "commands": [
+                ":vsplit"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "s"
+            ],
+            "commands": [
+                ":split"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "m"
+            ],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "b",
+                "m"
+            ],
+            "commands": [
+                "bookmarks.list"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "f",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.togglePanel"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "g",
+                "d"
+            ],
+            "commands": [
+                "editor.action.revealDefinition"
+            ],
+            "when": [
+                "editorFocus"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "g",
+                "h"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ],
+            "when": [
+                "editorFocus"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "g",
+                "i"
+            ],
+            "commands": [
+                "editor.action.goToImplementation"
+            ],
+            "when": [
+                "editorFocus"
+            ]
+        },
+        //? HARPOON (vscode-harpoon) START
+        //* [A]dd Harpoon
+        {
+            "before": [
+                "leader",
+                "a"
+            ],
+            "commands": [
+                "vscode-harpoon.addEditor"
+            ]
+        },
+        //* Open [H]arpoon file
+        {
+            "before": [
+                "leader",
+                "h"
+            ],
+            "commands": [
+                "vscode-harpoon.editEditors"
+            ]
+        },
+        //* Quick [P]ick Harpoon file
+        {
+            "before": [
+                "leader",
+                "p"
+            ],
+            "commands": [
+                "vscode-harpoon.editorQuickPick"
+            ]
+        },
+        //* Pick Harpoon file [1]
+        {
+            "before": [
+                "leader",
+                "1"
+            ],
+            "commands": [
+                "vscode-harpoon.gotoEditor1"
+            ]
+        },
+        //* Pick Harpoon file [2]
+        {
+            "before": [
+                "leader",
+                "2"
+            ],
+            "commands": [
+                "vscode-harpoon.gotoEditor2"
+            ]
+        },
+        //* Pick Harpoon file [3]
+        {
+            "before": [
+                "leader",
+                "3"
+            ],
+            "commands": [
+                "vscode-harpoon.gotoEditor3"
+            ]
+        },
+        //* Pick Harpoon file [4]
+        {
+            "before": [
+                "leader",
+                "4"
+            ],
+            "commands": [
+                "vscode-harpoon.gotoEditor4"
+            ]
+        },
+        //* Pick Harpoon file [5]
+        {
+            "before": [
+                "leader",
+                "5"
+            ],
+            "commands": [
+                "vscode-harpoon.gotoEditor5"
+            ]
+        },
+        //? HARPOON (vscode-harpoon) END
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // Stay in visual mode while indenting
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+    ],
+    "vim.searchHighlightColor": "#f6ff0080",
+    "vim.searchHighlightTextColor": "#fff",
+    "vim.smartRelativeLine": true,
+    "vim.surround": true,
+    "vim.useCtrlKeys": true,
+    "vim.useSystemClipboard": true,
+    //? Theme and Icons
+    "workbench.colorTheme": "One Dark Pro Night Flat",
+    "workbench.iconTheme": "material-icon-theme",
+    //? Layout
+    "editor.minimap.enabled": false,
+    "explorer.confirmPasteNative": false,
+    "git.autofetch": true,
+}

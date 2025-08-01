@@ -1,5 +1,8 @@
 {
     //? Coding
+    "[sql]": {
+        "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+    },
     "[python]": {
         "editor.codeActionsOnSave": {
             "source.fixAll": "explicit",
@@ -8,6 +11,11 @@
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.formatOnSave": true
     },
+    //? *********** Formatter Config *********/
+    //* SQL-Formatter
+    "Prettier-SQL.SQLFlavourOverride": "transactsql",
+    "Prettier-SQL.keywordCase": "upper",
+    "Prettier-SQL.linesBetweenQueries": 1,
     //? *********** Better Comments *********/
     "better-comments.multilineComments": true,
     "better-comments.tags": [
@@ -61,72 +69,6 @@
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
-    //? *********** SQL Server Settings *********/
-    "mssql.connectionGroups": [
-        {
-            "id": "CFF86676-1C66-4D31-9B98-003938288BBE",
-            "name": "ROOT"
-        }
-    ],
-    "mssql.connections": [
-        {
-            "accountId": "9eec930d-96b4-4dcb-a134-a328f5770c08.8a6cf78f-ef5b-41d5-b3d3-f2f952598362",
-            "applicationIntent": "ReadWrite",
-            "applicationName": "vscode-mssql",
-            "authenticationType": "AzureMFA",
-            "azureAccountToken": "",
-            "commandTimeout": 30,
-            "connectTimeout": 30,
-            "database": "",
-            "email": "vincent.li@ivcevidensia.com",
-            "encrypt": "Mandatory",
-            "expiresOn": 1750866951,
-            "groupId": "CFF86676-1C66-4D31-9B98-003938288BBE",
-            "id": "7549D91E-E19B-4549-BAB3-ED88A761D84F",
-            "password": "",
-            "profileName": "Prod Server P01",
-            "server": "uks-az-sql-p01.ukso10f89307c7925.database.windows.net",
-            "user": "Vincent Li - vincent.li@ivcevidensia.com"
-        },
-        {
-            "accountId": "9eec930d-96b4-4dcb-a134-a328f5770c08.8a6cf78f-ef5b-41d5-b3d3-f2f952598362",
-            "applicationIntent": "ReadWrite",
-            "applicationName": "vscode-mssql",
-            "authenticationType": "AzureMFA",
-            "azureAccountToken": "",
-            "commandTimeout": 30,
-            "connectTimeout": 30,
-            "database": "",
-            "email": "vincent.li@ivcevidensia.com",
-            "encrypt": "Mandatory",
-            "expiresOn": 1750866984,
-            "groupId": "CFF86676-1C66-4D31-9B98-003938288BBE",
-            "id": "E7154E23-76BC-4A29-AFF1-559F5839EB51",
-            "password": "",
-            "profileName": "Prod Server P06",
-            "server": "uks-az-sql-p06.7fcd745e766a.database.windows.net",
-            "user": "Vincent Li - vincent.li@ivcevidensia.com"
-        },
-        {
-            "accountId": "9eec930d-96b4-4dcb-a134-a328f5770c08.8a6cf78f-ef5b-41d5-b3d3-f2f952598362",
-            "applicationIntent": "ReadWrite",
-            "applicationName": "vscode-mssql",
-            "authenticationType": "AzureMFA",
-            "azureAccountToken": "",
-            "commandTimeout": 30,
-            "connectTimeout": 30,
-            "database": "",
-            "email": "vincent.li@ivcevidensia.com",
-            "encrypt": "Mandatory",
-            "expiresOn": 1750867019,
-            "groupId": "CFF86676-1C66-4D31-9B98-003938288BBE",
-            "id": "E3F8F222-1163-4EA8-AE9E-D8C7E445DD2F",
-            "password": "",
-            "profileName": "Test Server T01",
-            "server": "uks-az-sql-t01.c6dba8b655c2.database.windows.net",
-            "user": "Vincent Li - vincent.li@ivcevidensia.com"
-        }
-    ],
     "vim.easymotion": true, // Search with "\\f"
     "vim.handleKeys": {
         "<C-a>": false,
@@ -370,7 +312,7 @@
             "commands": [
                 "vscode-harpoon.gotoEditor5"
             ]
-        },
+        }
         //? HARPOON (vscode-harpoon) END
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -390,7 +332,7 @@
             "commands": [
                 "editor.action.indentLines"
             ]
-        },
+        }
     ],
     "vim.searchHighlightColor": "#f6ff0080",
     "vim.searchHighlightTextColor": "#fff",
@@ -402,5 +344,7 @@
     "workbench.colorTheme": "One Dark Pro Night Flat",
     "workbench.iconTheme": "material-icon-theme",
     //? Layout
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "explorer.confirmPasteNative": false,
+    "git.autofetch": true
 }
