@@ -2,10 +2,17 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.api.nvim_set_keymap("i", "tn", "<Esc>", { noremap = false })
+-- Quick escape in insert mode
+vim.keymap.set("i", "tn", "<Esc>", { desc = "Escape to normal mode" })
 
+-- Format document
 vim.keymap.set("n", "<leader>cf", function()
   vim.lsp.buf.format({ async = true })
 end, { desc = "Format Document" })
 
+-- Navigate diagnostics
 vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+
+-- Buffer navigation
+vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Previous Buffer" })
