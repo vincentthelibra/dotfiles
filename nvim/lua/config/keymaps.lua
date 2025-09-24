@@ -16,3 +16,7 @@ vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, { desc = "Next diagn
 -- Buffer navigation
 vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Previous Buffer" })
+
+-- Move text up and down
+vim.keymap.set("v", "J", ":move '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":move '<-2<CR>gv=gv")
