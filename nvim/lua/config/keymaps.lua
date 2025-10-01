@@ -20,3 +20,7 @@ vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Previous Buffer" 
 -- Move text up and down
 vim.keymap.set("v", "J", ":move '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":move '<-2<CR>gv=gv")
+
+-- Keep visual selection when indenting
+vim.keymap.set('v', '<', '<gv', { desc = 'Indent left and reselect' })
+vim.keymap.set('v', '>', '>gv', { desc = 'Indent right and reselect' })
