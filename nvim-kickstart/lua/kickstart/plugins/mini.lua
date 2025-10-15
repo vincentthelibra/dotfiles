@@ -53,6 +53,8 @@ return {
         },
       }
 
+      require('mini.splitjoin').setup()
+
       require('mini.tabline').setup()
 
       --- Keymaps section ---
