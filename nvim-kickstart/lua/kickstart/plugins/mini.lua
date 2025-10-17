@@ -32,7 +32,15 @@ return {
         return '%2l:%-2v'
       end
 
-      require('mini.icons').setup()
+      require('mini.icons').setup {
+        style = 'glyph',
+        filetype = {
+          norg = { glyph = '󰎞', hl = 'MiniIconsYellow' },
+        },
+        extension = {
+          norg = { glyph = '󰎞', hl = 'MiniIconsYellow' },
+        },
+      }
 
       require('mini.files').setup {
         options = {
