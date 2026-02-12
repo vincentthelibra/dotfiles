@@ -36,7 +36,10 @@ return {
         yaml = { 'prettierd', 'prettier', stop_after_first = true },
 
         -- Conform can also run multiple formatters sequentially
-        python = { 'isort', 'black' },
+        python = {
+          { 'isort', command = { 'python', '-m', 'isort' }, args = { '--stdout', '-' } },
+          { 'black', command = { 'python', '-m', 'black' }, args = { '--quiet', '-' } },
+        },
 
         -- You can use 'stop_after_first' to run the first available formatter from the list
         html = { 'prettierd', 'prettier', stop_after_first = true },

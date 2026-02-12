@@ -38,7 +38,8 @@ return {
         },
       },
     }
-
+    vim.keymap.set('n', '<leader>nww', '<cmd>Neorg workspace work<CR>', { desc = 'Neorg: Open work workspace' })
+    vim.keymap.set('n', '<leader>nwp', '<cmd>Neorg workspace personal<CR>', { desc = 'Neorg: Open personal workspace' })
     vim.opt.conceallevel = 2
   end,
 }
